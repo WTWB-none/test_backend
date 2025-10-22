@@ -314,7 +314,7 @@ async fn main() {
         .route("/api/analyze", get(analyze_handler))
         .layer(cors);
 
-    let listener = TcpListener::bind("https://test-backend-iqyp.onrender.com").await.unwrap();
+    let listener = TcpListener::bind("0.0.0.0:3000").await.unwrap();
     println!("RandomTrust Backend v2 запущен на https://test-backend-iqyp.onrender.com");
     axum::serve(listener, app).await.unwrap();
 }
