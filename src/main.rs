@@ -315,6 +315,6 @@ async fn main() {
         .layer(cors);
 
     let listener = TcpListener::bind("127.0.0.1:3000").await.unwrap();
-    println!("RandomTrust Backend v2 запущен на http://127.0.0.1:3000");
+    println!("RandomTrust Backend v2 запущен на http://127.0.0.1");
     axum::serve(listener, app).await.unwrap();
 }
